@@ -12,11 +12,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
       appBar: AppBar(
-        title: Text('Text_Widget')
+        title: Text('Text_Widget Test')
       ),
-    body:const Text.rich(
-      TextSpan(
+    body:RichText(
+      text:TextSpan(
         text: 'Hello ',
+        style: DefaultTextStyle.of(context).style,
         children: <TextSpan>[
           TextSpan(text: 'bold', style: TextStyle(fontWeight: FontWeight.bold)),
           TextSpan(text: ' world!'),
